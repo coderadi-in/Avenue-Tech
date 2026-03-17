@@ -1,0 +1,55 @@
+/* ================================================== */
+/* HERO */
+/* ================================================== */
+
+.hero {
+    height: 70vh;
+    background-image: url('./assets/hero.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* ================================================== */
+/* FEATURED */
+/* ================================================== */
+
+.featured .grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.featured .feature .symbol {
+    background-color: var(--color-border);
+    width: fit-content;
+}
+
+/* ================================================== */
+/* TESTIMONIALS */
+/* ================================================== */
+
+.testimonials .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+}
+
+/* ================================================== */
+/* HIGHLIGHT */
+/* ================================================== */
+
+.highlighted .grid { grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr)); }
+.highlighted .product .image-content { overflow: hidden; }
+.highlighted .product .img { transition: transform 0.3s ease-in-out; }
+.highlighted .product:hover .img { transform: scale(1.05); }
+
+/* ================================================== */
+/* ABOUT */
+/* ================================================== */
+
+.about .grid { grid-template-columns: repeat(auto-fit, minmax(min(500px, 100%), 1fr)); }
+
+/* ================================================== */
+/* & RESPONSIVENESS */
+/* ================================================== */
+
+@media (max-width: 568px) {
+    .header .h3 { display: none; }
+    .header .list li:not(:first-child) { display: none; }
+}
