@@ -48,8 +48,6 @@
     letter-spacing: 1px;
 }
 
-*::-webkit-scrollbar { display: none; }
-
 *::selection {
     background-color: var(--color-accent-main);
     color: var(--color-text-main);
