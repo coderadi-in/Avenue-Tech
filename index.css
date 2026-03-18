@@ -31,12 +31,40 @@
 }
 
 /* ================================================== */
-/* HIGHLIGHT */
+/* HIGHLIGHTED */
 /* ================================================== */
 
-.highlighted .grid { grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr)); }
-.highlighted .product .image-content { overflow: hidden; }
+.highlighted .heading .para { max-width: 900px; }
+.highlighted .grid { grid-template-columns: repeat(auto-fit, minmax(min(500px, 100%), 1fr)); }
+
+.highlighted .product .image-content {
+    overflow: hidden;
+    position: relative;
+}
+
+.highlighted .product .image-content .para {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    
+    opacity: 0;
+    pointer-events: none;
+    
+    padding: 20px;
+    color: var(--color-bg-main);
+    background-color: var(--color-bg-transparent);
+    backdrop-filter: blur(3px);
+
+    transition: opacity 0.3s ease-in-out;
+}
+
 .highlighted .product .img { transition: transform 0.3s ease-in-out; }
+
+.highlighted .product:hover .image-content .para {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 .highlighted .product:hover .img { transform: scale(1.05); }
 
 /* ================================================== */
